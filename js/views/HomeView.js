@@ -1,9 +1,7 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'mustache',
-], function($, _, Backbone,mustache) {
+import * as Backbone from 'backbone';
+import * as $ from 'jquery';
+import * as _ from 'underscore';
+function HomeView() {
     var HomeView = Backbone.View.extend({
         render: function(){
             this.$el.html("Home Page");
@@ -11,5 +9,7 @@ define([
         }
     });
     return HomeView;
-});
+}
+
+export default HomeView;
 

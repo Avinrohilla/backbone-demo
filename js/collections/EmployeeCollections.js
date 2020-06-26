@@ -1,13 +1,12 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'models/Employee'
-], function($, _, Backbone, Employee) {
+import * as Backbone from 'backbone';
+import Employee from '../models/Employee';
+
+function EmployeeCollection() {
     var EmployeeCollection = Backbone.Collection.extend({
-        url: "http://dummy.restapiexample.com/api/v1/employees",
+        url: "https://jsonplaceholder.typicode.com/users",
         model: Employee
     });
     return EmployeeCollection;
-});
+}
+export default EmployeeCollection;
 

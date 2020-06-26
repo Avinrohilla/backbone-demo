@@ -1,9 +1,9 @@
-define([
-    'underscore',
-    'backbone'
-], function(_, Backbone) {
+import * as Backbone from 'backbone';
+
+function Employee() {
     let Employee = Backbone.Model.extend({
-        urlRoot: "http://dummy.restapiexample.com/api/v1/employees"
+        urlRoot: "https://jsonplaceholder.typicode.com/users"
     });
     return Employee;
-});
+}
+export default Employee;

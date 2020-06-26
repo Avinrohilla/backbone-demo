@@ -1,9 +1,8 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'mustache'
-], function($, _, Backbone,mustache) {
+import * as Backbone from 'backbone';
+import * as $ from 'jquery';
+import * as _ from 'underscore';
+import * as mustache from 'mustache';
+function AlbumView() {
     let AlbumView = Backbone.View.extend({
         
         initialize:function(){
@@ -17,4 +16,6 @@ define([
         }
     });
     return AlbumView;
-});
+}
+
+export default AlbumView;

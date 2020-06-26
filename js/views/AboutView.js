@@ -1,9 +1,8 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'mustache'
-], function($, _, Backbone,mustache) {
+import * as Backbone from 'backbone';
+import * as $ from 'jquery';
+import * as _ from 'underscore';
+
+function AboutView() {
     var AboutView = Backbone.View.extend({
         render: function(){
             this.$el.html("About Page");
@@ -12,5 +11,6 @@ define([
         }
     });
     return AboutView;
-});
+}
+export default AboutView;
 

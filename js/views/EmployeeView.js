@@ -1,9 +1,8 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'mustache'
-], function($, _, Backbone,mustache) {
+import * as Backbone from 'backbone';
+import * as $ from 'jquery';
+import * as _ from 'underscore';
+import * as mustache from 'mustache';
+function EmployeeView() {
     let EmployeeView = Backbone.View.extend({
         tagName:'li',
         render: function() {
@@ -14,4 +13,6 @@ define([
         }
     });
     return EmployeeView;
-});
+}
+
+export default EmployeeView;

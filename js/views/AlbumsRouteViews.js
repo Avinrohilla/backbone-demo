@@ -1,10 +1,9 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'views/AlbumView',
-    'collections/AlbumCollections'
-], function($, _, Backbone,AlbumView,AlbumCollections) {
+import * as Backbone from 'backbone';
+import * as $ from 'jquery';
+import * as _ from 'underscore';
+import AlbumView from '../views/AlbumView';
+import AlbumCollections from '../collections/AlbumCollections';
+function AlbumsRouteViews() {
     let AlbumsRouteViews = Backbone.View.extend({
         initialize: function(empId){
             this.render(empId);
@@ -28,4 +27,6 @@ define([
         }
     });
     return AlbumsRouteViews;
-});
+}
+
+export default AlbumsRouteViews;
