@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-box">
+            <ul id="nav" class="center-box">
+                <li><a data-url="" class="active">Home</a></li>
+                <li><a data-url="/about">About</a></li>
+                <li><a data-url="/contact">Contact</a></li>
+            </ul>
+        </header>
+        <div class="container center-box">
+            <div class="left-box">
+                <h2>Employees</h2>
+                <ul id="employeeBox"></ul>
+            </div>
+            <div class="right-box">
+                <div id="container">loading...</div>
+            </div>
+        </div>
+        <footer class="footer-box">This is footer</footer>
+    </div>
+   <!-- This is template for Employee -->
+    <script type="text/html" id="employeeTemplate">
+        <a data-url="albums/{{id}}">{{employee_name}}</a>
+    </script>
+    <!-- This is template for Album -->
+    <script type="text/html" id="albumTemplate">
+        <div class="album-box">
+            <img src="{{thumbnailUrl}}" />
+            <h3>{{title}}</h3>
+        </div>
+    </script>
+    <script src="node_modules/requirejs/require.js" data-main="js/main"></script>
+</body>
+
+</html>

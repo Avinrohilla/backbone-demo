@@ -1,0 +1,20 @@
+{
+  "name": "avin-backbone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "./node_modules/.bin/http-server ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.4.0",
+    "http-server": "^0.12.3",
+    "jquery": "^3.5.1",
+    "mustache": "^4.0.1",
+    "normalize.css": "^8.0.1",
+    "requirejs": "^2.3.6",
+    "underscore": "^1.10.2"
+  }
+}
