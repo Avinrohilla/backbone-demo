@@ -1,10 +1,10 @@
 import Router from './routing/Router';
-import EmployeesViews from './views/EmployeesViews';
+import UsersViews from './views/UsersViews';
 
 function App() {
     let initialize = function(){
         new Router();
-        new EmployeesViews();
+        new UsersViews();
     }
     return {
         initialize:initialize
