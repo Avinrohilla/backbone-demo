@@ -3,8 +3,7 @@ import * as $ from 'jquery';
 import * as _ from 'underscore';
 import AlbumView from '../views/AlbumView';
 import AlbumCollections from '../collections/AlbumCollections';
-function AlbumsRouteViews() {
-    let AlbumsRouteViews = Backbone.View.extend({
+ let AlbumsRouteViews = Backbone.View.extend({
         initialize: function(empId){
             this.render(empId);
         },
@@ -26,7 +25,6 @@ function AlbumsRouteViews() {
             return this;  
         }
     });
-    return AlbumsRouteViews;
-}
+    
 
 export default AlbumsRouteViews;

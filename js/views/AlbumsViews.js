@@ -4,7 +4,7 @@ import * as _ from 'underscore';
 import AlbumView from '../views/AlbumView';
 import AlbumCollections from '../collections/AlbumCollections';
 
- function AlbumsViews() {
+
     let AlbumsViews = Backbone.View.extend({
         initialize: function(){
             this.render();
@@ -27,7 +27,6 @@ import AlbumCollections from '../collections/AlbumCollections';
             return this;  
         }
     });
-    return AlbumsViews;
-}
+    
 
 export default AlbumsViews;

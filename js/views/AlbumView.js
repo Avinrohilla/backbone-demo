@@ -1,8 +1,7 @@
 import * as Backbone from 'backbone';
 import * as $ from 'jquery';
-import * as _ from 'underscore';
 import * as mustache from 'mustache';
-function AlbumView() {
+
     let AlbumView = Backbone.View.extend({
         
         initialize:function(){
@@ -15,7 +14,5 @@ function AlbumView() {
 		    return this;
         }
     });
-    return AlbumView;
-}
-
+    
 export default AlbumView;

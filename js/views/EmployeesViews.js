@@ -4,7 +4,6 @@ import * as _ from 'underscore';
 import EmployeeView from '../views/EmployeeView';
 import EmployeeCollections from '../collections/EmployeeCollections';
 
- function EmployeesViews() {
     let EmployeesViews = Backbone.View.extend({
         initialize: function(){
             this.render();
@@ -25,7 +24,6 @@ import EmployeeCollections from '../collections/EmployeeCollections';
             return this;  
         }
     });
-    return EmployeesViews;
-}
+    
 
 export default EmployeesViews;

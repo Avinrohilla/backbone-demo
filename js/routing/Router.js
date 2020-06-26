@@ -61,7 +61,6 @@ function Router() {
 	var navView = new NavView({
 		el: "body"
 	});
-	debugger;
 	return Router;
 }
 

@@ -1,7 +1,5 @@
 import * as Backbone from 'backbone';
-import * as $ from 'jquery';
-import * as _ from 'underscore';
- function ContactView() {
+
     var ContactView = Backbone.View.extend({
         render: function(){
             this.$el.html("Contact Page");
@@ -9,7 +7,6 @@ import * as _ from 'underscore';
             return this;
         }
     });
-    return ContactView;
-}
+   
 export default ContactView;
 
