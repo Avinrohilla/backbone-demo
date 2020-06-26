@@ -1,13 +1,10 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'models/Album'
-], function($, _, Backbone, Album) {
-    var AlbumCollection = Backbone.Collection.extend({
-        url: "https://jsonplaceholder.typicode.com/photos",
-        model: Album
-    });
-    return AlbumCollection;
+import * as Backbone from 'backbone';
+import Album from '../models/Album';
+
+let AlbumCollection = Backbone.Collection.extend({
+    url: "https://jsonplaceholder.typicode.com/photos",
+    model: Album
 });
+
+export default AlbumCollection;
 

@@ -1,8 +1,5 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone'
-], function($, _, Backbone) {
+import * as Backbone from 'backbone';
+
     var ContactView = Backbone.View.extend({
         render: function(){
             this.$el.html("Contact Page");
@@ -10,6 +7,6 @@ define([
             return this;
         }
     });
-    return ContactView;
-});
+   
+export default ContactView;
 

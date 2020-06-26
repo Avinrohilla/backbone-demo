@@ -7,8 +7,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/bundle.css">
 </head>
 <body>
     <div class="wrapper">
@@ -21,7 +20,7 @@
         </header>
         <div class="container center-box">
             <div class="left-box">
-                <h2>Employees</h2>
+                <h2>Users</h2>
                 <ul id="employeeBox"></ul>
             </div>
             <div class="right-box">
@@ -32,7 +31,7 @@
     </div>
    <!-- This is template for Employee -->
     <script type="text/html" id="employeeTemplate">
-        <a data-url="albums/{{id}}">{{employee_name}}</a>
+        <a data-url="albums/{{id}}">{{username}}</a>
     </script>
     <!-- This is template for Album -->
     <script type="text/html" id="albumTemplate">
@@ -41,7 +40,7 @@
             <h3>{{title}}</h3>
         </div>
     </script>
-    <script src="node_modules/requirejs/require.js" data-main="js/main"></script>
+    <script src="/dist/main.js" ></script>
 </body>
 
 </html>
