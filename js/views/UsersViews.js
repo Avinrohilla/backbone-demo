@@ -5,17 +5,17 @@ import UserView from '../views/UserView';
 import UserCollections from '../collections/UserCollections';
 
     let UsersViews = Backbone.View.extend({
+        collection: new UserCollections(),
         initialize: function(){
             this.render();
         },
         render: function(){
-           let collection = new UserCollections();
-             collection.fetch({
+             this.collection.fetch({
                 success: function(item){
                     let users = item.models.splice(0,10);
                     _.each(users,function(user){
                         var users =  new UserView({
-                            model:user.attributes
+                            model:user.toJSON()
                         });
                         $('#userBox').append(users.render().$el);
                     },this)

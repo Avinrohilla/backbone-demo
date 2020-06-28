@@ -6,18 +6,18 @@ import AlbumCollections from '../collections/AlbumCollections';
 
 
     let AlbumsViews = Backbone.View.extend({
+        collection: new AlbumCollections(),
         initialize: function(){
             this.render();
            
         },
         render: function(){
-           let collection = new AlbumCollections();
-             collection.fetch({
+             this.collection.fetch({
                 success: function(item){
                     let albums = item.models.splice(0,10);
                      _.each(albums,function(album){
                          var albums =  new AlbumView({
-                            model:album.attributes
+                            model:album.toJSON()
                         });
                         $('#container').append(albums.render().$el);
                         
