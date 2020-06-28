@@ -3,7 +3,6 @@ import * as $ from 'jquery';
 import AboutView from '../views/AboutView';
 import ContactView from '../views/ContactView';
 import AlbumsViews from '../views/AlbumsViews';
-import AlbumsFilterViews from '../views/AlbumsFilterViews';
 
 function Router() {
 	var Router = Backbone.Router.extend({
@@ -25,7 +24,7 @@ function Router() {
 
 		viewAlbums: function (id) {
 			$('#container').html('');
-			new AlbumsFilterViews(id);
+			new AlbumsViews(id);
 		},
 
 		viewAContact: function (id) {
