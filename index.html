@@ -29,11 +29,13 @@
         </div>
         <footer class="footer-box">This is footer</footer>
     </div>
-   <!-- This is template for Users -->
-    <script type="text/html" id="userTemplate">
-        <a data-url="albums/{{id}}">{{username}}</a>
-    </script>
-    <!-- This is template for Album -->
+   <!-- This is template for Users using Underscore template -->
+    <script type="text/template" id="userTemplate">
+        <% _.each(users.toJSON(),function(user){ %>
+            <li><a data-url="albums/<%= user.id %>"><%= user.username %></a></li>
+        <%}) %>
+</script>
+    <!-- This is template for Album using Mustache template -->
     <script type="text/html" id="albumTemplate">
         <div class="album-box">
             <img src="{{thumbnailUrl}}" />

@@ -12,12 +12,13 @@ import AlbumCollections from '../collections/AlbumCollections';
            
         },
         render: function(){
+           
              this.collection.fetch({
                 success: function(item){
-                    let albums = item.models.splice(0,10);
+                    let albums = item.toJSON().splice(0,10);
                      _.each(albums,function(album){
                          var albums =  new AlbumView({
-                            model:album.toJSON()
+                            model:album
                         });
                         $('#container').append(albums.render().$el);
                         

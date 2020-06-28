@@ -11,6 +11,7 @@ import AlbumCollections from '../collections/AlbumCollections';
         render: function(userId){
              this.collection.fetch({
                 success: function(item){
+                    
                     _.each(item.toJSON(),function(album){
                          if(album.albumId==userId){
                          var albums =  new AlbumView({
