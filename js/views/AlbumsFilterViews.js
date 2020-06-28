@@ -4,18 +4,17 @@ import * as _ from 'underscore';
 import AlbumView from '../views/AlbumView';
 import AlbumCollections from '../collections/AlbumCollections';
  let AlbumsFilterViews = Backbone.View.extend({
+        collection: new AlbumCollections(),
         initialize: function(userId){
             this.render(userId);
         },
         render: function(userId){
-           let collection = new AlbumCollections();
-             collection.fetch({
+             this.collection.fetch({
                 success: function(item){
-                    let albums = item.models;
-                     _.each(albums,function(album){
-                         if(album.attributes.albumId==userId){
+                    _.each(item.toJSON(),function(album){
+                         if(album.albumId==userId){
                          var albums =  new AlbumView({
-                            model:album.attributes
+                            model:album
                         });
                         $('#container').append(albums.render().$el);
                     }
