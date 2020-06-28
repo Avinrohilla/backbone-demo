@@ -17,9 +17,9 @@ import AlbumCollections from '../collections/AlbumCollections';
                 success: function(item){
                     let albums;
                     if(userId){
-                        albums = _.where(item.toJSON(),{albumId:JSON.parse(userId)});
+                        albums = _.where(item.toJSON(),{albumId:JSON.parse(userId)}).splice(0,10);
                     }else{
-                        albums = item.toJSON().splice(0,10);
+                        albums = item.toJSON().splice(0,50);
                     }
                      _.each(albums,(album)=>{
                          let albums =  new AlbumView({ model:album });
